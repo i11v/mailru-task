@@ -1,0 +1,40 @@
+/**
+ * Block: phone-field
+ */
+
+.phone-field
+  width 375px
+  text-align justify
+  white-space nowrap
+
+  &__item
+    display inline-block
+
+    &__separator
+      display inline-block
+      width 10px
+      text-align center
+
+    &__input
+      display inline-block
+      background $primary-color
+      border 0
+      outline 0
+      padding 0
+      margin 0
+      font 200 24pt "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light", "Helvetica Neue", Helvetica, "Segoe UI Light", Arial, sans-serif
+      color $alt-color
+      placeholder(color $secondary-color,)
+
+      &-code
+        max-width 60px
+        text-align center
+
+      &-number
+        max-width 230px
+
+  &__helper
+    display inline-block
+    width 100%
+    height 0
+    visibility hidden

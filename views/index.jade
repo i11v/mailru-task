@@ -1,0 +1,18 @@
+- var hash = commit ? "?" + commit : "";
+
+doctype 5
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    title #{ title }
+    link(rel="stylesheet", type="text/css", href="public/build/main.css#{ hash }")
+  body
+    .layout
+      .layout__form
+        include blocks/pay-form
+
+    if dev
+      script(src="public/build/libs.js")
+      script(src="public/build/modules.js")
+    else
+      script(src="public/build/mailru-task.min.js#{ hash }")

@@ -1,0 +1,10 @@
+//- Block: pay-form
+
+form.pay-form.js-pay-form(action="/pay", method="POST")
+  h3.pay-form__header
+    | Форма оплаты мобильной связи
+  .pay-form__body
+    include phone-field
+    include money-field
+  .pay-form__control
+    include button-send

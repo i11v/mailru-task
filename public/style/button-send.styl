@@ -1,0 +1,22 @@
+/**
+ * Block: button-send
+ */
+
+.button-send
+  display inline-block
+  background $alt-color
+  border 0
+  font 300 11pt "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Segoe UI Light", sans-serif
+  color $primary-color
+  padding 5px 20px
+  margin 0
+
+  &:hover
+  &:active
+  &:focus
+    color $accent-color
+
+  &_disabled
+  &:disabled
+    background $secondary-color
+    color $primary-color

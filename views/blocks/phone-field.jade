@@ -1,0 +1,35 @@
+//- Block: phone-field
+
+extends field
+
+block field-label
+  label.field__header__label(for="phone-code")
+    | Номер телефона
+
+block field-input
+  .phone-field
+    .phone-field__item
+      .phone-field__item__county-code +7
+    = "\n"
+    .phone-field__item
+      .phone-field__item__separator |
+    = "\n"
+    .phone-field__item
+      input.phone-field__item__input.phone-field__item__input-code(
+        id="phone-code"
+        type="text"
+        placeholder="919"
+        autofocus
+        required)
+    = "\n"
+    .phone-field__item
+      .phone-field__item__separator |
+    = "\n"
+    .phone-field__item
+      input.phone-field__item__input.phone-field__item__input-number(
+        id="phone-number"
+        type="text"
+        placeholder="479-02-05"
+        required)
+    = "\n"
+    .phone-field__helper

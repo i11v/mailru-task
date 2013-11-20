@@ -1,0 +1,13 @@
+//- Block: money-input
+
+extends field
+
+block field-label
+  label.field__header__label(for="money-input")
+    | Сумма пополнения
+
+block field-input
+  .money-field__body
+    input.money-field__body__input(id="money-input", type="text", name="money", placeholder="0", required)
+    .money-field__body__tag
+      | рублей

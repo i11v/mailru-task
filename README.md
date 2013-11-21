@@ -1,3 +1,3 @@
 # Mail.ru task
 
-Mail.ru introductory task.
+Mail.ru test task.

@@ -1,5 +1,9 @@
-;(function (window, document, $) {
+(function (window, document, $) {
   "use strict";
 
-  console.log($.fn.jquery);
+  $(".js-mask").mask();
+
+  $(document).on("submit", ".js-pay-form", function (e) {
+    e.preventDefault();
+  });
 }(window, document, jQuery));

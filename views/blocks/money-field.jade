@@ -8,6 +8,12 @@ block field-label
 
 block field-input
   .money-field__body
-    input.money-field__body__input(id="money-input", type="text", name="money", placeholder="0", required)
+    input.money-field__body__input.js-mask(
+      id="money-input"
+      type="text"
+      name="money"
+      pattern="^[0-9]+$"
+      placeholder="0"
+      required)
     .money-field__body__tag
       | рублей

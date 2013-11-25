@@ -8,12 +8,13 @@ block field-label
 
 block field-input
   .money-field__body
-    input.money-field__body__input.js-mask(
+    input.money-field__body__input.js-form-unlock.js-check.js-money-amount(
       id="money-input"
+      name="amount"
       type="text"
-      name="money"
       pattern="^[0-9]+$"
       placeholder="0"
+      tabindex="3"
       required)
     .money-field__body__tag
       | рублей

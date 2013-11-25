@@ -9,17 +9,20 @@ block field-label
 block field-input
   .phone-field
     .phone-field__item
-      .phone-field__item__county-code +7
+      .phone-field__item__county-code.js-country-code +7
     = "\n"
     .phone-field__item
       .phone-field__item__separator |
     = "\n"
     .phone-field__item
-      input.phone-field__item__input.phone-field__item__input-code.js-mask(
+      input.phone-field__item__input-code.js-check.js-phone-code(
         id="phone-code"
+        name="phone-code"
         type="text"
-        pattern="[0-9]{3}"
+        pattern="^[0-9]{3}$"
         placeholder="919"
+        data-mask="   "
+        tabindex="1"
         autofocus
         required)
     = "\n"
@@ -27,11 +30,14 @@ block field-input
       .phone-field__item__separator |
     = "\n"
     .phone-field__item
-      input.phone-field__item__input.phone-field__item__input-number.js-mask(
+      input.phone-field__item__input-number.js-check.js-phone-number(
         id="phone-number"
+        name="phone-number"
         type="text"
-        pattern="[0-9]{3}\-[0-9]{2}-[0-9]{2}"
+        pattern="^[0-9]{3}\-[0-9]{2}-[0-9]{2}$"
         placeholder="479-02-05"
+        data-mask="   -  -  "
+        tabindex="2"
         required)
     = "\n"
     .phone-field__helper

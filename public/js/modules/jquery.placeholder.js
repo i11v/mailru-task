@@ -7,6 +7,7 @@
     this.element = element;
     this.$element = $(element);
     this.clear = true;
+
     this.init();
   };
 

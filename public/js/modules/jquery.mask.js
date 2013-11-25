@@ -9,20 +9,18 @@
     this.pattern = new RegExp($element.attr("pattern"));
     this.mask = $element.data().mask;
     this.options = options;
-    this.value = "";
     this.init();
   };
 
   Mask.prototype.init = function () {
     var that = this;
 
-    this.$element.on("keyup.mask", function (e) {
+    that.$element.on("keyup.mask", function (e) {
       var value = this.value
         , length = this.value.length
         , match = function () { return value.match(/\-/g) };
 
-      that.value = value;
-
+      // Adding dashs
       length === that.mask.indexOf("-", length)
         && (!match() || (match() && match().length !== 2))
         && (e.keyCode !== 8)

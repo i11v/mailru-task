@@ -48,6 +48,9 @@
     console.log(formData);
   };
 
+  // Enable IE placeholder support
+  $("input[type='text']").placeholder();
+
   // Set mask to phone input field
   $(".js-phone-code, .js-phone-number").mask();
 

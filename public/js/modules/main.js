@@ -54,6 +54,17 @@
   // Set mask to phone input field
   $(".js-phone-code, .js-phone-number").mask();
 
+  // Ruble word declension
+  $(".js-declension").declension({
+    target: ".js-money-amount",
+    rules: {
+      0: "рублей",
+      1: "рубль",
+      2: "рубля",
+      5: "рублей"
+    }
+  });
+
   // Subscribe to events
   $document.on("submit", ".js-pay-form", sendData);
 

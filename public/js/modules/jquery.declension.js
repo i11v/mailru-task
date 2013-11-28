@@ -18,8 +18,10 @@
         , word = that.rules["0"];
 
       if ((amount % 100 < 11) || (amount % 100 > 19)) {
+        amount %= 10;
+
         $.each(that.rules, function (index, value) {
-          (amount % 10 >= index) && (word = value);
+          (amount >= index) && (word = value);
         });
       }
 

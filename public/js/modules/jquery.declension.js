@@ -17,9 +17,11 @@
       var amount = parseInt(this.value)
         , word = that.rules["0"];
 
-      $.each(that.rules, function (index, value) {
-        amount >= index && (word = value);
-      });
+      if ((amount % 100 < 11) || (amount % 100 > 19)) {
+        $.each(that.rules, function (index, value) {
+          (amount % 10 >= index) && (word = value);
+        });
+      }
 
       that.$element.text(word);
     });

@@ -15,9 +15,10 @@
 
     that.$target.on("keyup.declension", function () {
       var amount = parseInt(this.value)
+        , tens = amount % 100
         , word = that.rules["0"];
 
-      if ((amount % 100 < 11) || (amount % 100 > 19)) {
+      if ((tens < 11) || (tens > 19)) {
         amount %= 10;
 
         $.each(that.rules, function (index, value) {
